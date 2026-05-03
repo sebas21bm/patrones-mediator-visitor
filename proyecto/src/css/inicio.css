@@ -3,7 +3,8 @@
     border: 2px solid #ff5757;
     padding: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 10px
+    margin: 10px;
+    min-height: 90px;
 }
 
 .alert-message h2{
@@ -15,8 +16,8 @@
 }
 
 .alert-message img{
-    width: 5%;
-    height: 5%;
+    width: 4%;
+    height: 2%;
     opacity: 0.75;
     float: left;
     padding-left: 10px;
