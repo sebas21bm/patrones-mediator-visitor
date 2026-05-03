@@ -1,1 +1,68 @@
-/* Para que gitignore no elimine la carpeta
+.alert-message{
+    background-color: #fdf0f0;
+    border: 2px solid #ff5757;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+table{
+    width: 100%;
+    padding: 10px;
+    border-spacing: 30px;
+    border-collapse: collapse;
+    
+}
+
+th{
+    background-color: #2231f2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+}
+
+tr{
+    border-bottom: 1px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+td{
+    padding: 5px;
+}
+
+tr:hover{
+    background-color: #dcf4ff;
+}
+
+caption{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    font-style: italic;
+}
+
+ul{
+    background-color: #ccc7c7;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+li{
+    float: left;
+    padding: 10px;
+}
+
+a:link{
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding: 15px;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+a:hover{
+    background-color: #2231f2;
+    color:white
+}
+a:visited{
+    color: black;
+}
