@@ -5,7 +5,7 @@ import type { Visitor } from "./Visitor";
 export class VistorAlertas implements Visitor{
     
     visitarUsuario(elemento: Usuario): void {
-        //
+
     }
 
     visitarVenta(elemento: Venta): void {

@@ -15,7 +15,7 @@ export class Venta implements Elemento{
 
 
     accept(visitor: Visitor): void {
-        visitor.visitarVenta
+        visitor.visitarVenta(this)
     }
 
 }
