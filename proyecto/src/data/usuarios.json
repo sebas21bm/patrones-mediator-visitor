@@ -1,0 +1,4 @@
+{
+  "_comment": "Esta sección configura la base de datos",
+  "db_host": "localhost"
+}
