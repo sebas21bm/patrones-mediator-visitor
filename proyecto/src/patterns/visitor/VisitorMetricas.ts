@@ -57,23 +57,45 @@ export class VisitorMetricas implements Visitor {
 
     }
 
-    getMetricasVentas(){
-        /*let maxDia = "N/A";
+    getMetricasVenta(){
+        let maxDia = " ";
         let max = 0;
 
         for (let dia in this.dias) {
-            if (this.dias[dia] > max) {
-                max = this.dias[dia];
+            const valor = this.dias[dia] ?? 0;
+            if (valor > max) {
+                max = valor;
                 maxDia = dia;
-            }*/
+            }
+        }
 
         return{
             totalVentas:
                 this.totalVentas,
             gastoPromedio:
                 this.totalVentas = 0 ? 0 : this.sumaTotalPagado / this.totalVentas,
-            facturasGeneradas : this.facturasGeneradas
+            diaMasFrecuente:
+                maxDia,
+            facturasGeneradas: 
+                this.facturasGeneradas
         }
     }
 
 }
+
+
+/*
+// Necesito esto para poder usar este visitor de métricas
+const elementos: Elemento[] = [
+ //con datos: Usuarios y Ventas, los que decias del json
+];
+
+const visitor = new VisitorMetricas();
+
+elementos.forEach(elemento => elemento.accept(visitor));
+
+// resultados
+const usuarios = visitor.getMetricasUsuario();
+const ventas = visitor.getMetricasVenta();
+
+*/
