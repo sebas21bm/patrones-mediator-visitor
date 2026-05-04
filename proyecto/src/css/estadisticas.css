@@ -47,11 +47,15 @@ td, tr{
 }
 
 tr:hover{
-    background-color: #f2f4f6;
+    background-color: rgba(191, 193, 195, 0.177);
 }
 
 caption{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 10px;
     font-style: italic;
+}
+
+.th1{
+    width: 75%;
 }

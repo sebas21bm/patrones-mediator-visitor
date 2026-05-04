@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/proyecto/src/css/global.css">
     <link rel="stylesheet" href="/proyecto/src/css/inicio.css">
+    <link rel="shortcut icon" href="/proyecto/public/assets/icons/data-analytics.png" type="image/x-icon">
     <title>Dashboard - Inicio</title>
 </head>
 <body>
@@ -18,11 +19,9 @@
 
     <hr>
 
-    <div class="alert-message">
+    <div class="alert-message" id="alertBox">
         <img src="/proyecto/public/assets/icons/alarma.png" alt="Imagen de alerta">
-        <h2>Alertas</h2>
-        <p>Alerta 1</p>
-        <p>Alerta 2</p>
+        <div class="alert-content" id="#alertContent"></div>
     </div>
 
 <br>
@@ -33,7 +32,7 @@
             <th colspan="2">Usuarios</th>
         </tr>
         <tr>
-            <td>Total de usuarios</td>
+            <td class="td1">Total de usuarios</td>
             <td>#</td>
         </tr>
         <tr>
@@ -50,7 +49,7 @@
             <th colspan="2">Ventas</th>
         </tr>
         <tr>
-            <td>Total de ventas</td>
+            <td class="td1"">Total de ventas</td>
             <td>#</td>
         </tr>
         <tr>
