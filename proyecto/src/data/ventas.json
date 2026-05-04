@@ -1,4 +1,61 @@
-{
-  "_comment": "Esta sección configura la base de datos",
-  "db_host": "localhost"
-}
+[
+  { "fecha": "2026-05-01", "totalPagado": 180, "facturada": true },
+  { "fecha": "2026-05-01", "totalPagado": 95, "facturada": false },
+  { "fecha": "2026-05-01", "totalPagado": 210, "facturada": true },
+  { "fecha": "2026-05-01", "totalPagado": 130, "facturada": true },
+  { "fecha": "2026-05-01", "totalPagado": 75, "facturada": false },
+
+  { "fecha": "2026-05-02", "totalPagado": 160, "facturada": true },
+  { "fecha": "2026-05-02", "totalPagado": 240, "facturada": true },
+  { "fecha": "2026-05-02", "totalPagado": 110, "facturada": false },
+  { "fecha": "2026-05-02", "totalPagado": 90, "facturada": true },
+  { "fecha": "2026-05-02", "totalPagado": 155, "facturada": true },
+
+  { "fecha": "2026-05-03", "totalPagado": 220, "facturada": true },
+  { "fecha": "2026-05-03", "totalPagado": 145, "facturada": false },
+  { "fecha": "2026-05-03", "totalPagado": 85, "facturada": true },
+  { "fecha": "2026-05-03", "totalPagado": 170, "facturada": true },
+  { "fecha": "2026-05-03", "totalPagado": 260, "facturada": true },
+
+  { "fecha": "2026-05-04", "totalPagado": 115, "facturada": false },
+  { "fecha": "2026-05-04", "totalPagado": 140, "facturada": true },
+  { "fecha": "2026-05-04", "totalPagado": 190, "facturada": true },
+  { "fecha": "2026-05-04", "totalPagado": 125, "facturada": false },
+  { "fecha": "2026-05-04", "totalPagado": 205, "facturada": true },
+
+  { "fecha": "2026-05-05", "totalPagado": 80, "facturada": true },
+  { "fecha": "2026-05-05", "totalPagado": 135, "facturada": true },
+  { "fecha": "2026-05-05", "totalPagado": 175, "facturada": false },
+  { "fecha": "2026-05-05", "totalPagado": 225, "facturada": true },
+  { "fecha": "2026-05-05", "totalPagado": 95, "facturada": true },
+
+  { "fecha": "2026-05-06", "totalPagado": 120, "facturada": true },
+  { "fecha": "2026-05-06", "totalPagado": 165, "facturada": false },
+  { "fecha": "2026-05-06", "totalPagado": 210, "facturada": true },
+  { "fecha": "2026-05-06", "totalPagado": 145, "facturada": true },
+  { "fecha": "2026-05-06", "totalPagado": 100, "facturada": false },
+
+  { "fecha": "2026-05-07", "totalPagado": 185, "facturada": true },
+  { "fecha": "2026-05-07", "totalPagado": 150, "facturada": true },
+  { "fecha": "2026-05-07", "totalPagado": 70, "facturada": false },
+  { "fecha": "2026-05-07", "totalPagado": 230, "facturada": true },
+  { "fecha": "2026-05-07", "totalPagado": 125, "facturada": true },
+
+  { "fecha": "2026-05-08", "totalPagado": 160, "facturada": false },
+  { "fecha": "2026-05-08", "totalPagado": 200, "facturada": true },
+  { "fecha": "2026-05-08", "totalPagado": 105, "facturada": true },
+  { "fecha": "2026-05-08", "totalPagado": 180, "facturada": false },
+  { "fecha": "2026-05-08", "totalPagado": 95, "facturada": true },
+
+  { "fecha": "2026-05-09", "totalPagado": 220, "facturada": true },
+  { "fecha": "2026-05-09", "totalPagado": 135, "facturada": false },
+  { "fecha": "2026-05-09", "totalPagado": 155, "facturada": true },
+  { "fecha": "2026-05-09", "totalPagado": 90, "facturada": true },
+  { "fecha": "2026-05-09", "totalPagado": 175, "facturada": false },
+
+  { "fecha": "2026-05-10", "totalPagado": 140, "facturada": true },
+  { "fecha": "2026-05-10", "totalPagado": 195, "facturada": true },
+  { "fecha": "2026-05-10", "totalPagado": 110, "facturada": false },
+  { "fecha": "2026-05-10", "totalPagado": 165, "facturada": true },
+  { "fecha": "2026-05-10", "totalPagado": 85, "facturada": true }
+]

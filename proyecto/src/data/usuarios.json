@@ -1,3 +1,77 @@
 [
-  
+  {
+    "conMembresia": true,
+    "activo": true,
+    "totalCompras": 3
+  },
+  {
+    "conMembresia": false,
+    "activo": true,
+    "totalCompras": 4
+  },
+  {
+    "conMembresia": true,
+    "activo": false,
+    "totalCompras": 2
+  },
+  {
+    "conMembresia": false,
+    "activo": true,
+    "totalCompras": 5
+  },
+  {
+    "conMembresia": true,
+    "activo": true,
+    "totalCompras": 3
+  },
+  {
+    "conMembresia": false,
+    "activo": false,
+    "totalCompras": 1
+  },
+  {
+    "conMembresia": true,
+    "activo": true,
+    "totalCompras": 6
+  },
+  {
+    "conMembresia": false,
+    "activo": true,
+    "totalCompras": 4
+  },
+  {
+    "conMembresia": true,
+    "activo": false,
+    "totalCompras": 2
+  },
+  {
+    "conMembresia": false,
+    "activo": true,
+    "totalCompras": 3
+  },
+  {
+    "conMembresia": true,
+    "activo": true,
+    "totalCompras": 5
+  },
+  {
+    "conMembresia": false,
+    "activo": false,
+    "totalCompras": 1
+  },
+  {
+    "conMembresia": true,
+    "activo": true,
+    "totalCompras": 4
+  },
+  {
+    "conMembresia": false,
+    "activo": true,
+    "totalCompras": 3
+  },
+  {
+    "conMembresia": true,
+    "activo": false,
+    "totalCompras": 4
+  }
 ]
