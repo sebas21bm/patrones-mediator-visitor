@@ -1,5 +1,5 @@
-import { Venta } from "../elements/Venta";
-import { VistorAlertas } from "../patterns/visitor/VisitorAlertas";
+import { Venta } from "../elements/Venta.js";
+import { VistorAlertas } from "../patterns/visitor/VisitorAlertas.js";
 
 const ventasData = await fetch("/proyecto/src/data/ventas.json").then(res => res.json());
 

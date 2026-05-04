@@ -1,10 +1,10 @@
-import type { Mediator } from "../patterns/mediator/Mediator";
+import type { Mediator } from "../patterns/mediator/Mediator.js";
 import type { Componente } from "./Componente";
 
 export class ResumenInicio implements Componente{
-    mediador: Mediator;
+    private mediador?: Mediator;
 
-    constructor(mediador: Mediator){
+    setMediator(mediador: Mediator): void {
         this.mediador = mediador;
     }
 }

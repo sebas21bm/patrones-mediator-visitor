@@ -1,5 +1,5 @@
-import type { Mediator } from "../patterns/mediator/Mediator";
+import type { Mediator } from "../patterns/mediator/Mediator.js";
 
 export interface Componente{
-    mediador : Mediator;
+    setMediator(mediador: Mediator): void;
 }

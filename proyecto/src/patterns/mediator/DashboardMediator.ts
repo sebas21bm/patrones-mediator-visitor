@@ -1,23 +1,45 @@
-import type { Componente } from "../../components/Componente";
-import type { PanelUsuarios } from "../../components/PanelUsuarios";
-import type { PanelVentas } from "../../components/PanelVentas";
-import type { ResumenInicio } from "../../components/ResumenInicio";
-import type { Mediator } from "./Mediator";
+import type { Componente } from "../../components/Componente.js";
+import { PanelUsuarios } from "../../components/PanelUsuarios.js";
+import type { PanelVentas } from "../../components/PanelVentas.js";
+import type { ResumenInicio } from "../../components/ResumenInicio.js";
+import { VisitorMetricas } from "../visitor/VisitorMetricas.js";
+import type { Mediator } from "./Mediator.js";
 
 export class DashboardMediator implements Mediator{
 
-    panelUsuarios : PanelUsuarios;
-    panelVentas : PanelVentas;
-    resumenInicio : ResumenInicio;
+    panelUsuarios?: PanelUsuarios;
+    panelVentas?: PanelVentas;
+    resumenInicio?: ResumenInicio;
 
-    notificar(Componente: Componente): void {
-        //TODO Implementacion del mediador
+    setPanelUsuarios(panelUsuarios: PanelUsuarios){
+        this.panelUsuarios = panelUsuarios
     }
 
-    constructor(panelUsuarios: PanelUsuarios, panelVentas: PanelVentas, resumenInicio: ResumenInicio){
-        this.panelUsuarios = panelUsuarios;
-        this.panelVentas = panelUsuarios;
+    setPanelVentas(panelVentas: PanelVentas){
+        this.panelVentas = panelVentas;
+    }
+
+    setResumenInicio(resumenInicio: ResumenInicio){
         this.resumenInicio = resumenInicio;
     }
 
+    notificar(componente: Componente): void {
+        //TODO Implementacion del mediador
+        if (componente instanceof PanelUsuarios){
+
+        }
+    }
+
+    actualizarMetricasUsuario(metricas: {
+        totalUsuario: number;
+        promedioActivos: number;
+        promedioCompras: number;
+        cuentasPremium: number;
+    }): void {
+        if (this.panelUsuarios == null){
+            return;
+        }
+
+        this.panelUsuarios.actualizarMetricas(metricas);
+    }
 }

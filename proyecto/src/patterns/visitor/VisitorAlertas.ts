@@ -1,6 +1,6 @@
-import type { Usuario } from "../../elements/Usuario";
-import type { Venta } from "../../elements/Venta";
-import type { Visitor } from "./Visitor";
+import type { Usuario } from "../../elements/Usuario.js";
+import type { Venta } from "../../elements/Venta.js";
+import type { Visitor } from "./Visitor.js";
 
 export class VistorAlertas implements Visitor{
     private alertasUsuarios: string[] = []
