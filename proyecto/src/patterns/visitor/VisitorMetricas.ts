@@ -50,7 +50,7 @@ export class VisitorMetricas implements Visitor {
             promedioActivos:
                 this.totalUsuarios === 0 ? 0 : this.usuariosActivos / this.totalUsuarios,
             promedioCompras:
-                this.totalUsuarios === 0 ? 0 : this.sumaTotalPagado / this.totalUsuarios,
+                this.totalUsuarios === 0 ? 0 : this.sumaPedidosRealizados / this.totalUsuarios,
             cuentasPremium: 
                 this.cuentasPremium
         };
@@ -73,7 +73,7 @@ export class VisitorMetricas implements Visitor {
             totalVentas:
                 this.totalVentas,
             gastoPromedio:
-                this.totalVentas = 0 ? 0 : this.sumaTotalPagado / this.totalVentas,
+                this.totalVentas === 0 ? 0 : this.sumaTotalPagado / this.totalVentas,
             diaMasFrecuente:
                 maxDia,
             facturasGeneradas: 
