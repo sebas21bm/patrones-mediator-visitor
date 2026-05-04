@@ -1,36 +1,67 @@
 .alert-message{
-    background-color: #fdf0f0;
+    /*Border & Size*/
+    border-radius: 0.5rem;
     border: 2px solid #ff5757;
     padding: 10px;
+    margin: 10px;
+    min-height: 110px;
+
+    /*Para mostrarlos en fila*/
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    /*Font style*/
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: italic;
+    box-sizing: border-box;
+}
+
+.alert-message img{
+    width: 64px;
+    height: 64px;
+    opacity: 0.75;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.alert-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.alert-content p{
+    margin: 0;
+    font-size: 1.05rem;
 }
 
 table{
     width: 100%;
-    padding: 10px;
-    border-spacing: 30px;
-    border-collapse: collapse;
+    border-spacing: 10px;
     
 }
 
 th{
+    border-radius: 0.5rem;
     background-color: #2231f2;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 5px;
+    padding: 10px;
+    
 }
 
-tr{
-    border-bottom: 1px solid black;
+td, tr{
+    padding: 10px;
+    border-bottom: 1px solid rgb(120, 117, 117);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-td{
-    padding: 5px;
 }
 
 tr:hover{
-    background-color: #dcf4ff;
+    background-color: rgba(191, 193, 195, 0.177);
+}
+
+.td1{
+    width: 75%;
 }
 
 caption{
@@ -47,7 +78,6 @@ ul{
 
 li{
     float: left;
-    padding: 10px;
 }
 
 a:link{
@@ -58,6 +88,7 @@ a:link{
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
+    border-radius: 0.25rem;
 }
 a:hover{
     background-color: #2231f2;
