@@ -3,8 +3,8 @@ import type { Venta } from "../../elements/Venta.js";
 import type { Visitor } from "./Visitor.js";
 
 export class VistorAlertas implements Visitor{
-    private alertasUsuarios: string[] = []
-    private alertasVentas: string[] = []
+    private alertaUsuarios = ""
+    private alertaVentas = ""
 
     private totalUsuarios = 0
     private usuariosInactivos = 0
@@ -26,51 +26,38 @@ export class VistorAlertas implements Visitor{
 
         this.totalVentas++
 
-        if(!venta.facturada){
-            this.ventasSinFacturar++
-        }
-
         if(venta.totalPagado >= valorVentaGrande){
             this.ventasGrande++
         }
     }
 
-    getAlertasUsuario(): string[] {  
-        this.alertasUsuarios = []
+    getAlertasUsuario(): string {  
+        this.alertaUsuarios = ""
         
         if(this.totalUsuarios > 0){
             const porcentajeUsuariosInactivos = (this.usuariosInactivos * 100 ) / this.totalUsuarios
 
             if(porcentajeUsuariosInactivos > 50){
-                this.alertasUsuarios.push("Más de 50% de usuarios inactivos")
-            }
-
-            if(porcentajeUsuariosInactivos < 10){
-                this.alertasUsuarios.push("Más del 90% de usuarios activos")
+                this.alertaUsuarios = "Más de 50% de usuarios inactivos"
             }
         }
 
-        return this.alertasUsuarios
+        return this.alertaUsuarios
     }
 
-    getAlertasVenta(): string[]{
-        this.alertasVentas = []
+    getAlertasVenta(): string {
+        this.alertaVentas = ""
+
 
         if(this.totalVentas > 0){
-            const porcentajeVentasSinFactura = (this.ventasSinFacturar * 100 ) / this.totalVentas
-
-            if(porcentajeVentasSinFactura > 50){
-                this.alertasVentas.push("Más del 50% de ventas sin facturar")
-            }
-
             const porcentajeVentasGrandes = (this.ventasGrande * 100 ) / this.totalVentas
 
             if(porcentajeVentasGrandes < 50){
-                this.alertasVentas.push("Menos del 50% de ventas de más de $1000")
+                this.alertaVentas = "Menos del 50% de ventas de más de $1000"
             }
         }
 
-        return this.alertasVentas
+        return this.alertaVentas
     }
 
 }
