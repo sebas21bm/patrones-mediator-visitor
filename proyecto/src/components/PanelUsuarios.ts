@@ -2,7 +2,7 @@ import type { Mediator } from "../patterns/mediator/Mediator.js";
 import type { Componente } from "./Componente.js";
 
 export class PanelUsuarios implements Componente{
-    private mediador?: Mediator;
+    mediador: Mediator | undefined;
 
     setMediator(mediador: Mediator): void {
         this.mediador = mediador;
