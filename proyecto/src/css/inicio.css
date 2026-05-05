@@ -7,7 +7,7 @@
     min-height: 110px;
 
     /*Para mostrarlos en fila*/
-    display: flex;
+    display: none;
     align-items: center;
     gap: 28px;
 
