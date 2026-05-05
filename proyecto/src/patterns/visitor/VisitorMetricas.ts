@@ -48,7 +48,7 @@ export class VisitorMetricas implements Visitor {
             totalUsuario : 
                 this.totalUsuarios,
             promedioActivos:
-                this.totalUsuarios === 0 ? 0 : this.usuariosActivos / this.totalUsuarios,
+                this.totalUsuarios === 0 ? 0 : (this.usuariosActivos * 100) / this.totalUsuarios,
             promedioCompras:
                 this.totalUsuarios === 0 ? 0 : this.sumaPedidosRealizados / this.totalUsuarios,
             cuentasPremium: 
