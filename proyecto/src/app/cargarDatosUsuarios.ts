@@ -1,5 +1,6 @@
 import { Usuario } from "../elements/Usuario.js";
 import { VisitorMetricas } from "../patterns/visitor/VisitorMetricas.js";
+import { VistorAlertas } from "../patterns/visitor/VisitorAlertas.js";
 
 export async function cargarDatosUsuarios() {
     const usuariosData = await fetch("../data/usuarios.json").then(res => res.json());
@@ -12,11 +13,16 @@ export async function cargarDatosUsuarios() {
         )
     );
     
-    const visitor = new VisitorMetricas();
+    const visitorMetricas = new VisitorMetricas();
+    const visitorAlertas = new VistorAlertas();
     
     for (const usuario of usuarios){
-        usuario.accept(visitor);
+        usuario.accept(visitorMetricas);
+        usuario.accept(visitorAlertas);
     }
     
-    return visitor.getMetricasUsuario();
+    return {
+        metricas : visitorMetricas.getMetricasUsuario(),
+        alerta : visitorAlertas.getAlertasUsuario()
+    }
 }

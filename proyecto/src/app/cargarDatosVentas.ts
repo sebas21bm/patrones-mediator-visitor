@@ -1,5 +1,6 @@
 import { Venta } from "../elements/Venta.js";
 import { VisitorMetricas } from "../patterns/visitor/VisitorMetricas.js";
+import { VistorAlertas } from "../patterns/visitor/VisitorAlertas.js";
 
 export async function cargarDatosVentas(){
     const ventasData = await fetch("../data/ventas.json").then(res => res.json());
@@ -12,11 +13,16 @@ export async function cargarDatosVentas(){
         )
     );
 
-    const visitor = new VisitorMetricas();
+    const visitorMetricas = new VisitorMetricas();
+    const visitorAlertas = new VistorAlertas();
 
     for (const venta of ventas){
-        venta.accept(visitor);
+        venta.accept(visitorMetricas);
+        venta.accept(visitorAlertas);
     }
 
-    return visitor.getMetricasVenta();
+    return {
+        metricas : visitorMetricas.getMetricasVenta(),
+        alerta : visitorAlertas.getAlertasVenta()
+    }
 }

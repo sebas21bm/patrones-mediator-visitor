@@ -27,4 +27,36 @@ export class ResumenInicio implements Componente{
         document.getElementById("totalVentasInicio")!.textContent = '$'+metricas.totalVentas.toString();
         document.getElementById("gastoPromedioInicio")!.textContent = metricas.gastoPromedio.toFixed(2);
     }
+
+    mostrarAlerta(alerta: string): void {
+        const alertBox = document.getElementById("alertBox");
+        const alertContent = document.getElementById("alertContent");
+
+        if (!alertBox || !alertContent) {
+            return;
+        }
+
+        if (!alerta) {
+            return;
+        }
+
+        alertBox.style.display = "flex";
+
+        const mensaje = document.createElement("div");
+        mensaje.textContent = alerta;
+
+        alertContent.appendChild(mensaje);
+    }
+
+    limpiarAlertas(): void {
+        const alertBox = document.getElementById("alertBox");
+        const alertContent = document.getElementById("alertContent");
+
+        if (!alertBox || !alertContent) {
+            return;
+        }
+
+        alertContent.innerHTML = "";
+        alertBox.style.display = "none";
+    }
 }

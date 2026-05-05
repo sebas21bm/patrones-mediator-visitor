@@ -9,3 +9,7 @@ mediador.setResumenInicio(resumenInicio);
 
 mediador.mostrarMetricasUsuarioInicio();
 mediador.mostrarMetricasVentasInicio();
+
+resumenInicio.limpiarAlertas();
+mediador.mostrarAlertasUsuarioInicio();
+mediador.mostrarAlertasVentasInicio();

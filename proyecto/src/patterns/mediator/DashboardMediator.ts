@@ -27,19 +27,19 @@ export class DashboardMediator implements Mediator{
     async notificar(componente: Componente, evento: string): Promise<void>{
 
         if (componente instanceof PanelUsuarios && evento === "actualizar"){
-            const metricas = await cargarDatosUsuarios();
+            const resultado = await cargarDatosUsuarios();
 
             localStorage.setItem(
                 "resumenUsuarios",
-                JSON.stringify(metricas)
+                JSON.stringify(resultado)
             );
         }
         if (componente instanceof PanelVentas && evento === "actualizar"){
-            const metricas = await cargarDatosVentas();
+            const resultado = await cargarDatosVentas();
 
             localStorage.setItem(
                 "resumenVentas",
-                JSON.stringify(metricas)
+                JSON.stringify(resultado)
             );
         }
     }
@@ -68,8 +68,25 @@ export class DashboardMediator implements Mediator{
             return;
         }
 
-        const metricas = JSON.parse(guardado);
-        this.resumenInicio.mostrarUltimosDatosUsuario(metricas);
+        const resultado = JSON.parse(guardado);
+
+        this.resumenInicio.mostrarUltimosDatosUsuario(resultado.metricas);
+    }
+
+    mostrarAlertasUsuarioInicio(): void {
+        if (!this.resumenInicio) {
+            return;
+        }
+
+        const guardado = localStorage.getItem("resumenUsuarios");
+
+        if (!guardado) {
+            return;
+        }
+
+        const resultado = JSON.parse(guardado);
+
+        this.resumenInicio.mostrarAlerta(resultado.alerta);
     }
 
     actualizarMetricasVentas(metricas: {
@@ -95,7 +112,24 @@ export class DashboardMediator implements Mediator{
             return;
         }
 
-        const metricas = JSON.parse(guardado);
-        this.resumenInicio.mostrarUltimosDatosVentas(metricas);
+        const resultado = JSON.parse(guardado);
+
+        this.resumenInicio.mostrarUltimosDatosVentas(resultado.metricas);
+    }
+
+    mostrarAlertasVentasInicio(): void {
+        if (!this.resumenInicio) {
+            return;
+        }
+
+        const guardado = localStorage.getItem("resumenVentas");
+
+        if (!guardado) {
+            return;
+        }
+
+        const resultado = JSON.parse(guardado);
+
+        this.resumenInicio.mostrarAlerta(resultado.alerta);
     }
 }

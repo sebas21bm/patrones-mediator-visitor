@@ -9,7 +9,6 @@ export class VistorAlertas implements Visitor{
     private totalUsuarios = 0
     private usuariosInactivos = 0
     private totalVentas = 0
-    private ventasSinFacturar = 0
     private ventasGrande = 0
 
     visitarUsuario(usuario: Usuario): void {

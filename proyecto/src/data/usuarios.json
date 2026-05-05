@@ -66,8 +66,18 @@
   },
   {
     "conMembresia": false,
-    "activo": true,
+    "activo": false,
     "totalCompras": 3
+  },
+  {
+    "conMembresia": true,
+    "activo": true,
+    "totalCompras": 4
+  },
+  {
+    "conMembresia": true,
+    "activo": true,
+    "totalCompras": 4
   },
   {
     "conMembresia": true,
