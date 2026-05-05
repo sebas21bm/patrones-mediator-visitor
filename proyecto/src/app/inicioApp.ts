@@ -1,29 +1,11 @@
-import { PanelUsuarios } from "../components/PanelUsuarios.js";
-import { Usuario } from "../elements/Usuario.js";
-import { Venta } from "../elements/Venta.js";
-import { VisitorMetricas } from "../patterns/visitor/VisitorMetricas.js";
+import { ResumenInicio } from "../components/ResumenInicio.js";
+import { DashboardMediator } from "../patterns/mediator/DashboardMediator.js";
 
-const usuariosData = await fetch("/proyecto/src/data/usuarios.json").then(res => res.json());
-const ventasData = await fetch("/proyecto/src/data/ventas.json").then(res => res.json());
+const resumenInicio = new ResumenInicio();
+const mediador = new DashboardMediator();
 
-const Elementos = [
-    usuariosData.map(
-        (u: any) => new Usuario(
-            u.conMembresia,
-            u.activo,
-            u.totalCompras
-        )
-    ),
+resumenInicio.setMediator(mediador);
+mediador.setResumenInicio(resumenInicio);
 
-    ventasData.map(
-            (v: any) => new Venta(
-                v.totalPagado,
-                new Date(v.fecha),
-                v.facturada
-            )
-        )
-];
-
-Elementos.forEach(elemento => {
-    elemento.accept(VisitorMetricas);
-});
+mediador.mostrarMetricasUsuarioInicio();
+mediador.mostrarMetricasVentasInicio();

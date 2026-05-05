@@ -59,3 +59,16 @@ caption{
 .th1{
     width: 75%;
 }
+
+.boton_actualizar{
+    align-items: center;
+    margin: 10px;
+    
+}
+
+.boton_actualizar button{
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

@@ -1,5 +1,5 @@
 import type { Mediator } from "../patterns/mediator/Mediator.js";
-import type { Componente } from "./Componente";
+import type { Componente } from "./Componente.js";
 
 export class PanelVentas implements Componente{
     private mediador?: Mediator;
@@ -18,6 +18,14 @@ export class PanelVentas implements Componente{
         document.getElementById("gastoPromedio")!.textContent = metricas.gastoPromedio.toFixed(2);
         document.getElementById("diaMasFrecuente")!.textContent = metricas.diaMasFrecuente.toString();
         document.getElementById("facturasGeneradas")!.textContent = metricas.facturasGeneradas.toString();
+    }
+
+    btnActualizarOnClick(): void{
+        const boton = document.getElementById("btn_actualizarVentas");
+        
+        boton!.addEventListener("click", () => {
+            this.mediador?.notificar(this, "actualizar");
+        })
     }
 
 }
