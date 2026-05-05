@@ -5,10 +5,6 @@ Implementacion de los patrones Mediator y Visitor
 2. Visitor
 
 ## Problema que resuelven
-El sistema necesita
-* Calcular metricas
-* Actualizar los componentes de la UI
-
 Un negocio de ropa tiene una pagina web en la que la gente puede registrarse y comprar ropa. Los dueños del negocio quieren una forma de ver el crecimiento y estadísticas de la clientes que compra por medio de su sitio web, para esto, acceden a un dashboard que tiene la información que necesitan. Además, el cliente desea que en un futuro se puedan añadir nuevas funcionalidades que le permita tener mas información acerca de su negocio. Este dashboard tendrá tres vistas distintas: 
 * **Inicio**: Muestra las ultimas estadisticas que mas le interesan sobre ambas vistas, además de alertas en caso de no cumplir alguna de las metas de negocio que tienen.
 * **Usuarios**: Muestra las métricas sobre los usuarios que se encuentren registrados en el sistema.
@@ -31,11 +27,17 @@ Otro gran problema es que al querer agregar funcionalidades nuevas dentro de las
 En el editor VisualStudioCode, instalar la extension **Live Server**, y dar clic derecho sobre uno de los archivos HTML, que se encuentran en la carpeta proyecto/src/html/, y dar seleccionar la opcion **Open With Live Server**. Esto va abrir la vista en el navegador por defecto.
 
 ## Herramientas utilizadas
-Version de TypeScript: 6.0.3
+* Version de TypeScript: 6.0.3
+* Version de HTML: HTML5
+* Version de CSS: CSS3
+
 
 ## ¿Cómo instalar las dependencias necesarias?
-* En caso de no tener TypeScript instalado, en la terminal se ejecuta el comando *npm i -g typescript*
+* En caso de no tener TypeScript instalado, en la terminal se ejecuta el comando
+  * `npm i -g typescript`
 * Link para descargar [Node.js](https://nodejs.org/en/download)
 
 ## ¿Cómo ejecutar el ejemplo?
-En la terminal, posicionado en la carpeta donde se encuentra el proyecto, se ejecuta el comando *npx tsc*
+En la terminal, posicionado en la carpeta donde se encuentra el proyecto, se ejecuta el comando
+
+`npx tsc`
