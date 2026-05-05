@@ -1,1 +1,5 @@
-// Para que gitignore no elimine la carpeta
+import type { Componente } from "../../components/Componente.js";
+
+export interface Mediator{
+    notificar(Componente : Componente): void;
+}

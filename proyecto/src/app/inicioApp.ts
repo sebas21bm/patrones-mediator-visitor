@@ -1,6 +1,7 @@
-import { Usuario } from "../elements/Usuario";
-import { Venta } from "../elements/Venta";
-import { VisitorMetricas } from "../patterns/visitor/VisitorMetricas";
+import { PanelUsuarios } from "../components/PanelUsuarios.js";
+import { Usuario } from "../elements/Usuario.js";
+import { Venta } from "../elements/Venta.js";
+import { VisitorMetricas } from "../patterns/visitor/VisitorMetricas.js";
 
 const usuariosData = await fetch("/proyecto/src/data/usuarios.json").then(res => res.json());
 const ventasData = await fetch("/proyecto/src/data/ventas.json").then(res => res.json());

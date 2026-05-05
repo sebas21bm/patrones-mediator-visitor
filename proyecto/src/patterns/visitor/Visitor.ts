@@ -1,5 +1,5 @@
-import {Usuario} from "../../elements/Usuario"
-import {Venta} from "../../elements/Venta"
+import {Usuario} from "../../elements/Usuario.js"
+import {Venta} from "../../elements/Venta.js"
 
 export interface Visitor{
     visitarUsuario(usuario: Usuario): void;

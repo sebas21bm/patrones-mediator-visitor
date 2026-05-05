@@ -1,6 +1,6 @@
-import type { Usuario } from "../../elements/Usuario";
-import type { Venta } from "../../elements/Venta";
-import type { Visitor } from "./Visitor";
+import type { Usuario } from "../../elements/Usuario.js";
+import type { Venta } from "../../elements/Venta.js";
+import type { Visitor } from "./Visitor.js";
 
 export class VistorAlertas implements Visitor{
     private alertasUsuarios: string[] = []
@@ -74,18 +74,3 @@ export class VistorAlertas implements Visitor{
     }
 
 }
-
-
-/*
-// Necesito esto para poder usar este visitor de alertas
-const elementos: Elemento[] = [
- //con datos: Usuarios y Ventas, los que decias del json
-];
-
-const visitor = new VisitorAlertas()
-
-elementos.forEach(elemento => elemento.accept(vistor))
-
-const alertasUsuario = visitor.getAlertasUsuario()
-const alertasVenta = visitor.getAlertasVenta()
-*/
