@@ -27,5 +27,4 @@ const mediador = new DashboardMediator();
 panelUsuarios.setMediator(mediador);
 mediador.setPanelUsuarios(panelUsuarios);
 
-console.log("prueba");
 mediador.actualizarMetricasUsuario(metricas);

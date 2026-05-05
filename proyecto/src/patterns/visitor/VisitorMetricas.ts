@@ -35,7 +35,7 @@ export class VisitorMetricas implements Visitor {
 
         this.sumaTotalPagado += venta.totalPagado
 
-        const dia = venta.fecha.toDateString();
+        const dia = venta.fecha.toLocaleDateString('es-ES');
         this.dias[dia] = (this.dias[dia] || 0) + 1;
 
         if(venta.facturada){
@@ -82,20 +82,3 @@ export class VisitorMetricas implements Visitor {
     }
 
 }
-
-
-/*
-// Necesito esto para poder usar este visitor de métricas
-const elementos: Elemento[] = [
- //con datos: Usuarios y Ventas, los que decias del json
-];
-
-const visitor = new VisitorMetricas();
-
-elementos.forEach(elemento => elemento.accept(visitor));
-
-// resultados
-const usuarios = visitor.getMetricasUsuario();
-const ventas = visitor.getMetricasVenta();
-
-*/

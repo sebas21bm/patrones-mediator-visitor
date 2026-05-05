@@ -15,8 +15,8 @@ export class PanelUsuarios implements Componente{
         cuentasPremium: number;
     }): void{
         document.getElementById("totalUsuarios")!.textContent = metricas.totalUsuario.toString();
-        document.getElementById("promedioActivos")!.textContent = metricas.promedioActivos.toString();
-        document.getElementById("promedioPedidos")!.textContent = metricas.promedioCompras.toString();
+        document.getElementById("promedioActivos")!.textContent = metricas.promedioActivos.toFixed(2);
+        document.getElementById("promedioPedidos")!.textContent = metricas.promedioCompras.toFixed(2);
         document.getElementById("cuentasPremium")!.textContent = metricas.cuentasPremium.toString();
     }
 

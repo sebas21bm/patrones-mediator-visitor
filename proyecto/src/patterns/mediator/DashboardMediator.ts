@@ -42,4 +42,16 @@ export class DashboardMediator implements Mediator{
 
         this.panelUsuarios.actualizarMetricas(metricas);
     }
+
+    actualizarMetricasVentas(metricas: {
+        totalVentas: number,
+        gastoPromedio: number,
+        diaMasFrecuente: string,
+        facturasGeneradas: number;
+    }): void {
+        if (this.panelVentas == null) {
+            return;
+        }
+        this.panelVentas.actualizarMetricas(metricas);
+    }
 }

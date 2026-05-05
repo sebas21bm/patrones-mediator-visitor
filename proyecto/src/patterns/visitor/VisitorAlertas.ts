@@ -74,18 +74,3 @@ export class VistorAlertas implements Visitor{
     }
 
 }
-
-
-/*
-// Necesito esto para poder usar este visitor de alertas
-const elementos: Elemento[] = [
- //con datos: Usuarios y Ventas, los que decias del json
-];
-
-const visitor = new VisitorAlertas()
-
-elementos.forEach(elemento => elemento.accept(vistor))
-
-const alertasUsuario = visitor.getAlertasUsuario()
-const alertasVenta = visitor.getAlertasVenta()
-*/
