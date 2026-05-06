@@ -43,7 +43,7 @@ export class DashboardMediator implements Mediator{
             );
         }
         if (componente instanceof PanelVentas && evento === "actualizar"){
-            const metricas = await obtenerMetricasVentas
+            const metricas = await obtenerMetricasVentas();
             const alertas = await revisarAlertasVentas();
 
             localStorage.setItem(
