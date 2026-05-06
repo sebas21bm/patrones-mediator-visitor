@@ -2,11 +2,6 @@ import type { Mediator } from "../patterns/mediator/Mediator.js";
 import { Componente } from "./Componente.js";
 
 export class ResumenInicio extends Componente{
-    mediador: Mediator | undefined;
-
-    setMediator(mediador: Mediator): void {
-        this.mediador = mediador;
-    }
 
     mostrarUltimosDatosUsuario(metricas: {
         totalUsuario: number;
