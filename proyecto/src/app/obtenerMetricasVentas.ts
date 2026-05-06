@@ -1,7 +1,7 @@
 import { Venta } from "../elements/Venta.js";
 import { VisitorMetricas } from "../patterns/visitor/VisitorMetricas.js";
 
-export async function cargarDatosVentas(){
+export async function obtenerMetricasVentas(){
     const ventasData = await fetch("../data/ventas.json").then(res => res.json());
 
     const ventas = ventasData.map(

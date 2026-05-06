@@ -1,8 +1,8 @@
 import { PanelUsuarios } from "../components/PanelUsuarios.js";
 import { DashboardMediator } from "../patterns/mediator/DashboardMediator.js";
-import { cargarDatosUsuarios } from "./cargarDatosUsuarios.js";
+import { obtenerMetricasUsuarios } from "./obtenerMetricasUsuarios.js";
 
-const resultado = await cargarDatosUsuarios();
+const resultado = await obtenerMetricasUsuarios();
 
 const panelUsuarios = new PanelUsuarios();
 const mediador = new DashboardMediator();

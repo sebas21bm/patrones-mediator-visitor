@@ -10,7 +10,7 @@ export class ResumenInicio extends Componente{
         cuentasPremium: number;
     }): void {
         document.getElementById("totalUsuariosInicio")!.textContent = metricas.totalUsuario.toString();
-        document.getElementById("cuentasPremiumInicio")!.textContent = metricas.cuentasPremium.toString();
+        document.getElementById("promedioActivosInicio")!.textContent = metricas.promedioActivos.toFixed(1)+"%"
     }
 
     mostrarUltimosDatosVentas(metricas: {

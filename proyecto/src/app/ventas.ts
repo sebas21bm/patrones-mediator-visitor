@@ -1,8 +1,8 @@
 import { PanelVentas } from "../components/PanelVentas.js";
 import { DashboardMediator } from "../patterns/mediator/DashboardMediator.js";
-import { cargarDatosVentas } from "./cargarDatosVentas.js";
+import { obtenerMetricasVentas } from "./obtenerMetricasVentas.js";
 
-const resultado = await cargarDatosVentas();
+const resultado = await obtenerMetricasVentas();
 
 const panelVentas = new PanelVentas();
 const mediador = new DashboardMediator();

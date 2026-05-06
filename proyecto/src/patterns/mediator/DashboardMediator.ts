@@ -1,5 +1,5 @@
-import { cargarDatosUsuarios } from "../../app/cargarDatosUsuarios.js";
-import { cargarDatosVentas } from "../../app/cargarDatosVentas.js";
+import { obtenerMetricasUsuarios } from "../../app/obtenerMetricasUsuarios.js";
+import { obtenerMetricasVentas } from "../../app/obtenerMetricasVentas.js";
 import { revisarAlertasUsuarios } from "../../app/revisarAlertasUsuarios.js";
 import { revisarAlertasVentas } from "../../app/revisarAlertasVentas.js";
 import type { Componente } from "../../components/Componente.js";
@@ -29,7 +29,7 @@ export class DashboardMediator implements Mediator{
     async notificar(componente: Componente, evento: string): Promise<void>{
 
         if (componente instanceof PanelUsuarios && evento === "actualizar"){
-            const metricas = await cargarDatosUsuarios();
+            const metricas = await obtenerMetricasUsuarios();
             const alertas = await revisarAlertasUsuarios();
 
             localStorage.setItem(
@@ -43,7 +43,7 @@ export class DashboardMediator implements Mediator{
             );
         }
         if (componente instanceof PanelVentas && evento === "actualizar"){
-            const metricas = await cargarDatosVentas();
+            const metricas = await obtenerMetricasVentas
             const alertas = await revisarAlertasVentas();
 
             localStorage.setItem(
