@@ -1,7 +1,7 @@
 import type { Mediator } from "../patterns/mediator/Mediator.js";
-import type { Componente } from "./Componente.js";
+import { Componente } from "./Componente.js";
 
-export class PanelVentas implements Componente{
+export class PanelVentas extends Componente{
     mediador: Mediator | undefined;
     
     setMediator(mediador: Mediator): void {

@@ -1,5 +1,7 @@
 import { cargarDatosUsuarios } from "../../app/cargarDatosUsuarios.js";
 import { cargarDatosVentas } from "../../app/cargarDatosVentas.js";
+import { revisarAlertasUsuarios } from "../../app/revisarAlertasUsuarios.js";
+import { revisarAlertasVentas } from "../../app/revisarAlertasVentas.js";
 import type { Componente } from "../../components/Componente.js";
 import { PanelUsuarios } from "../../components/PanelUsuarios.js";
 import { PanelVentas } from "../../components/PanelVentas.js";
@@ -27,19 +29,31 @@ export class DashboardMediator implements Mediator{
     async notificar(componente: Componente, evento: string): Promise<void>{
 
         if (componente instanceof PanelUsuarios && evento === "actualizar"){
-            const resultado = await cargarDatosUsuarios();
+            const metricas = await cargarDatosUsuarios();
+            const alertas = await revisarAlertasUsuarios();
 
             localStorage.setItem(
-                "resumenUsuarios",
-                JSON.stringify(resultado)
+                "metricasUsuarios",
+                JSON.stringify(metricas)
+            );
+
+            localStorage.setItem(
+                "alertasUsuarios",
+                JSON.stringify(alertas)
             );
         }
         if (componente instanceof PanelVentas && evento === "actualizar"){
-            const resultado = await cargarDatosVentas();
+            const metricas = await cargarDatosVentas();
+            const alertas = await revisarAlertasVentas();
 
             localStorage.setItem(
-                "resumenVentas",
-                JSON.stringify(resultado)
+                "metricasVentas",
+                JSON.stringify(metricas)
+            );
+            
+            localStorage.setItem(
+                "alertasVentas",
+                JSON.stringify(alertas)
             );
         }
     }
@@ -62,7 +76,7 @@ export class DashboardMediator implements Mediator{
             return;
         }
         
-        const guardado = localStorage.getItem("resumenUsuarios");
+        const guardado = localStorage.getItem("metricasUsuarios");
 
         if (!guardado) {
             return;
@@ -70,7 +84,7 @@ export class DashboardMediator implements Mediator{
 
         const resultado = JSON.parse(guardado);
 
-        this.resumenInicio.mostrarUltimosDatosUsuario(resultado.metricas);
+        this.resumenInicio.mostrarUltimosDatosUsuario(resultado);
     }
 
     mostrarAlertasUsuarioInicio(): void {
@@ -78,7 +92,7 @@ export class DashboardMediator implements Mediator{
             return;
         }
 
-        const guardado = localStorage.getItem("resumenUsuarios");
+        const guardado = localStorage.getItem("alertasUsuarios");
 
         if (!guardado) {
             return;
@@ -86,7 +100,7 @@ export class DashboardMediator implements Mediator{
 
         const resultado = JSON.parse(guardado);
 
-        this.resumenInicio.mostrarAlerta(resultado.alerta);
+        this.resumenInicio.mostrarAlerta(resultado);
     }
 
     actualizarMetricasVentas(metricas: {
@@ -106,7 +120,7 @@ export class DashboardMediator implements Mediator{
             return;
         }
         
-        const guardado = localStorage.getItem("resumenVentas");
+        const guardado = localStorage.getItem("metricasVentas");
 
         if (!guardado) {
             return;
@@ -114,7 +128,7 @@ export class DashboardMediator implements Mediator{
 
         const resultado = JSON.parse(guardado);
 
-        this.resumenInicio.mostrarUltimosDatosVentas(resultado.metricas);
+        this.resumenInicio.mostrarUltimosDatosVentas(resultado);
     }
 
     mostrarAlertasVentasInicio(): void {
@@ -122,7 +136,7 @@ export class DashboardMediator implements Mediator{
             return;
         }
 
-        const guardado = localStorage.getItem("resumenVentas");
+        const guardado = localStorage.getItem("alertasVentas");
 
         if (!guardado) {
             return;
@@ -130,6 +144,6 @@ export class DashboardMediator implements Mediator{
 
         const resultado = JSON.parse(guardado);
 
-        this.resumenInicio.mostrarAlerta(resultado.alerta);
+        this.resumenInicio.mostrarAlerta(resultado);
     }
 }

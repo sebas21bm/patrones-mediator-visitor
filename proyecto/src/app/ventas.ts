@@ -11,5 +11,5 @@ const mediador = new DashboardMediator();
 panelVentas.setMediator(mediador);
 mediador.setPanelVentas(panelVentas);
 
-mediador.actualizarMetricasVentas(resultado.metricas);
+mediador.actualizarMetricasVentas(resultado);
 panelVentas.btnActualizarOnClick();
