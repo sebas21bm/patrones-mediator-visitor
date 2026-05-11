@@ -1,5 +1,5 @@
 import type { Visitor } from "../patterns/visitor/Visitor.js";
-import type { Elemento } from "./Elemento";
+import type { Elemento } from "./Elemento.js";
 
 export class Venta implements Elemento{
     
