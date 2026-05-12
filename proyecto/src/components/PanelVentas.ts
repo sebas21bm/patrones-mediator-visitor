@@ -9,8 +9,8 @@ export class PanelVentas extends Componente{
         diaMasFrecuente: string,
         facturasGeneradas: number;
     }): void{
-        document.getElementById("totalVentas")!.textContent = '$'+metricas.totalVentas.toString();
-        document.getElementById("gastoPromedio")!.textContent = metricas.gastoPromedio.toFixed(2);
+        document.getElementById("totalVentas")!.textContent = metricas.totalVentas.toString();
+        document.getElementById("gastoPromedio")!.textContent = '$'+metricas.gastoPromedio.toFixed(2);
         document.getElementById("diaMasFrecuente")!.textContent = metricas.diaMasFrecuente.toString();
         document.getElementById("facturasGeneradas")!.textContent = metricas.facturasGeneradas.toString();
     }

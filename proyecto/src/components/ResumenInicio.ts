@@ -19,8 +19,8 @@ export class ResumenInicio extends Componente{
         diaMasFrecuente: string,
         facturasGeneradas: number;
     }): void {
-        document.getElementById("totalVentasInicio")!.textContent = '$'+metricas.totalVentas.toString();
-        document.getElementById("gastoPromedioInicio")!.textContent = metricas.gastoPromedio.toFixed(2);
+        document.getElementById("totalVentasInicio")!.textContent = metricas.totalVentas.toString();
+        document.getElementById("gastoPromedioInicio")!.textContent = '$'+metricas.gastoPromedio.toFixed(2);
     }
 
     mostrarAlerta(alerta: string): void {
