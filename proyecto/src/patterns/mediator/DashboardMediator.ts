@@ -1,7 +1,4 @@
-import { obtenerMetricasUsuarios } from "../../app/obtenerMetricasUsuarios.js";
-import { obtenerMetricasVentas } from "../../app/obtenerMetricasVentas.js";
-import { revisarAlertasUsuarios } from "../../app/revisarAlertasUsuarios.js";
-import { revisarAlertasVentas } from "../../app/revisarAlertasVentas.js";
+import { obtenerMetricasUsuarios, obtenerMetricasVentas, revisarAlertasUsuarios, revisarAlertasVentas } from "../../app/cargadorDatos.js";
 import type { Componente } from "../../components/Componente.js";
 import { PanelUsuarios } from "../../components/PanelUsuarios.js";
 import { PanelVentas } from "../../components/PanelVentas.js";

@@ -2,7 +2,7 @@ import type { Usuario } from "../../elements/Usuario.js";
 import type { Venta } from "../../elements/Venta.js";
 import type { Visitor } from "./Visitor.js";
 
-export class VistorAlertas implements Visitor{
+export class VisitorAlertas implements Visitor{
     private alertaUsuarios = ""
     private alertaVentas = ""
 

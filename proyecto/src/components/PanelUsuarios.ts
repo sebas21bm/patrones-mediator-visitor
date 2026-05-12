@@ -1,4 +1,3 @@
-import type { Mediator } from "../patterns/mediator/Mediator.js";
 import { Componente } from "./Componente.js";
 
 export class PanelUsuarios extends Componente{
