@@ -23,8 +23,10 @@ Otro gran problema es que al querer agregar funcionalidades nuevas dentro de las
 >[!WARNING]
 >Antes de ejecutar el proyecto, es necesario ejecutar los comandos descritos en la seccion **¿Cómo ejectuar el ejemplo?**
 
-
-En el editor VisualStudioCode, instalar la extension **Live Server**, y dar clic derecho sobre uno de los archivos HTML, que se encuentran en la carpeta proyecto/src/html/, y dar seleccionar la opcion **Open With Live Server**. Esto va abrir la vista en el navegador por defecto.
+1. En el editor VisualStudioCode, instalar la extension **Live Server**
+2. Dar clic derecho sobre uno de los archivos HTML, que se encuentran en la carpeta proyecto/src/html/, preferentemente el archivo **index.html**
+3. Seleccionar la opcion **Open With Live Server** o en la esquina inferior derecha **Go Live**
+4. Se abre automáticamente la vista en el navegador por defecto y es posible utilizarla.
 
 ## Herramientas utilizadas
 * Version de TypeScript: 6.0.3
@@ -33,11 +35,23 @@ En el editor VisualStudioCode, instalar la extension **Live Server**, y dar clic
 
 
 ## ¿Cómo instalar las dependencias necesarias?
-* En caso de no tener TypeScript instalado, en la terminal se ejecuta el comando
+> [!IMPORTANT]
+> En caso de no tener TypeScript instalado:
+1. Descargar [Node.js](https://nodejs.org/en/download) usando este link
+* Usar las opciones por defecto
+* Asegurarse de incluir **npm** en la instalación
+* Para verificar la instalación, escribir los siguientes comandos en la terminal:
+  * `node -v`
+  * `npm -v`
+ 2. Para instalar Typescript de manera global en la terminal se ejecuta el comando:
   * `npm i -g typescript`
-* Link para descargar [Node.js](https://nodejs.org/en/download)
+* Para verificar la instalación, escribir el siguiente comando en la terminal:
+  * `tsc -v`
 
 ## ¿Cómo ejecutar el ejemplo?
-En la terminal, posicionado en la carpeta donde se encuentra el proyecto, se ejecuta el comando
-
-`npx tsc`
+1. Para clonar el repositorio, abrir una terminar y ejecutar el comando:
+  * `git clone URL_DEL_REPOSITORIO`
+2. Ingresar a la carpeta del proyecto
+  * `cd proyecto`
+3. En la terminal, posicionado en la carpeta donde se encuentra el proyecto, ejecutar el comando:
+  * `npx tsc`
